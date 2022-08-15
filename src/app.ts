@@ -1,5 +1,7 @@
-const express = require("express");
-require("dotenv").config({ debug: true });
+import express from "express";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 
