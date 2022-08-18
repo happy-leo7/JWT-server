@@ -5,12 +5,14 @@ dotenv.config();
 
 const app = express();
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   res.send("happy leo");
 });
 
 app.listen(process.env.PORT, () => {
   console.log(
-    `[server]: Server is running at https://localhost:${process.env.PORT}`
+    `[server]: Server is running at http://localhost:${process.env.PORT}`
   );
 });
